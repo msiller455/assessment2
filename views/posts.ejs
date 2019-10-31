@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <a href="/">Home</a>
+    <a href="/posts">Posts</a>
+    <br>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+        <% posts.forEach(post => { %>
+          <tr>
+            <td><%= post.title %></td>
+            <td><%= post.body %></td>
+          </tr>
+        <% }) %>
+    </table>
+  </body>
+</html>
